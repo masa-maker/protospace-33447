@@ -48,7 +48,7 @@ class PrototypesController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in? && current_user.id != current_user.id
+    unless user_signed_in? && current_user.id == current_user.id
       redirect_to action: :index
     end
   end
